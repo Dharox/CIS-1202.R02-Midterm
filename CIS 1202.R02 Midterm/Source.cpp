@@ -55,8 +55,8 @@ int main()
 			break;
 		case 3:// Exit
 			repeat = false;
-		default:// Validation error.
-			cout << "\nHave a nice day.";
+		default:// Extreme error; shouldn't be possible unless Menu function gets extremely broken somehow.
+			cout << "\nCatastrophic error encountered. Program will terminate.";
 		}
 	}
 
@@ -80,6 +80,7 @@ int main()
 	*avgPrice = *sumPrice / numOrdered;
 	cout << "\nThe order average is $" << *avgPrice;
 
+	// Forgot to delete DMA pointers in original; change added in class 3/15/22.
 	delete sumPrice;
 	delete avgPrice;
 
